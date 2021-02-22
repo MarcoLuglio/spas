@@ -1,0 +1,14 @@
+[package]
+name = "spa_sample_rust_yew"
+version = "0.1.0"
+authors = ["Marco Luglio <marcodejulho@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+yew = "0.17"
+wasm-bindgen = "0.2"
