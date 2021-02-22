@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LanguagesRoutingModule } from './languages-routing.module';
 import { LanguagesComponent } from './languages.component';
-import { TimelineComponent } from '../timeline/timeline.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 
 @NgModule({

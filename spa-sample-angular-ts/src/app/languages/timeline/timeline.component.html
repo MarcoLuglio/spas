@@ -1,0 +1,10 @@
+<p>timeline works!</p>
+
+<ng-container>
+	<h2>{{title}}</h2>
+	<ul *ngIf='entries'>
+		<li *ngFor='let entry of entries'>
+			{{entry.name}} - {{entry.year}}
+		</li>
+	</ul>
+</ng-container>
