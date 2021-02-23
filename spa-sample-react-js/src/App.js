@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 
+// pages
+const Languages = lazy(() => import('./features/languages/Languages'));
+
 function App() {
 	return (
 		<div className="App">
