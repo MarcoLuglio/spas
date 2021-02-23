@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TimelineSorterService } from '../services/timeline-sorter.service';
+import { TimelineEntry } from '../../entities/timeline-entry.entity';
+import { TimelineSorterService } from './services/timeline-sorter.service';
 
 @Component({
 	selector: 'timeline',
@@ -11,11 +12,11 @@ export class TimelineComponent implements OnInit {
 	@Input() title:string = 'Timeline';
 
 	@Input()
-	get entries():Array<{ name: string; year:number }> { return this._entries; }
+	get entries():Array<TimelineEntry> { return this._entries; }
 
-	set entries(entries:Array<{ name: string; year:number }>) {
+	set entries(entries:Array<TimelineEntry>) {
 
-		let sortedEntries:Array<{ name: string; year:number }> = [];
+		let sortedEntries:Array<TimelineEntry> = [];
 
 		switch (this.sortBy) {
 			case 'name':
@@ -33,9 +34,9 @@ export class TimelineComponent implements OnInit {
 
 	}
 
-	private _entries:Array<{ name: string; year:number }> = [];
+	private _entries:Array<TimelineEntry> = [];
 
-	@Input() sortBy:string = 'date';
+	@Input() sortBy:string = 'year';
 
 	constructor(
 		private timelineSorterService:TimelineSorterService

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { TimelineEntry } from '../entities/timeline-entry.entity';
 
 @Injectable({
-	providedIn: 'root'
+	providedIn: 'root' // TODO change to languages, see what happens
 })
 export class TimelineSorterService {
 
@@ -9,11 +10,11 @@ export class TimelineSorterService {
 		//
 	}
 
-	numberSorter(a:any, b:any) {
-		return a.date - b.date;
+	numberSorter(a:TimelineEntry, b:TimelineEntry) {
+		return a.year - b.year;
 	}
 
-	stringSorter(a:any, b:any) {
+	stringSorter(a:TimelineEntry, b:TimelineEntry) {
 
 		var nameA = a.name.toUpperCase(); // ignore upper and lowercase
 		var nameB = b.name.toUpperCase(); // ignore upper and lowercase
