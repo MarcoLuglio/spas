@@ -57,8 +57,11 @@ export default function Languages() {
 		{ name: 'Swift', year: 2014 }
 	];
 
+	// component rendering side effects use the useEffect() function
+	// it cannot be called coditionally, but you can still put
+	// the condition inside the callback if you need to
 	useEffect(() => {
-		// document.title = `Equipment - ${site} - South Pine`; // TODO get site name and store initial page title in a var somewhere...
+		document.title = 'Languages';
 	});
 
 	return (
