@@ -1,5 +1,6 @@
 //import TimelineEntryEntity from '../entities/TimelineEntryEntity';
 import { numberSorterService, stringSorterService } from '../services/TimelineSorterServices';
+import { Link } from 'react-router-dom';
 
 
 
@@ -39,7 +40,7 @@ export default function Timeline(props) {
 			{ _entries.length > 0 &&
 				_entries.map((entry) =>
 					<li key={entry.name}>{/* Each item in a loop must have an unique identifier */}
-						{entry.name} - {entry.year}
+						<Link to={`languages/${entry.name}`}>{entry.name} - {entry.year}</Link>
 					</li>
 				)
 			}
