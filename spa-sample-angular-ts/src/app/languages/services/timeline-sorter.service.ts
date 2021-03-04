@@ -1,20 +1,24 @@
 import { Injectable } from '@angular/core';
-import { TimelineEntry } from '../entities/timeline-entry.entity';
+import TimelineEntryEntity from '../entities/timeline-entry.entity';
 
+
+
+// requires a class decorated with @Injectable
+// to use dependency injection
 @Injectable({
 	providedIn: 'root' // TODO change to languages, see what happens
 })
-export class TimelineSorterService {
+export default class TimelineSorterService {
 
 	constructor() {
 		//
 	}
 
-	numberSorter(a:TimelineEntry, b:TimelineEntry) {
+	numberSorter(a:TimelineEntryEntity, b:TimelineEntryEntity):number {
 		return a.year - b.year;
 	}
 
-	stringSorter(a:TimelineEntry, b:TimelineEntry) {
+	stringSorter(a:TimelineEntryEntity, b:TimelineEntryEntity):number {
 
 		var nameA = a.name.toUpperCase(); // ignore upper and lowercase
 		var nameB = b.name.toUpperCase(); // ignore upper and lowercase

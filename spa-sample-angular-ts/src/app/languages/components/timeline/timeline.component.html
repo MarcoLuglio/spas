@@ -1,10 +1,19 @@
-<p>timeline works!</p>
-
+<!--
+<ng-container> is a container tag that will not generate
+any html tag in the final rendering
+-->
 <ng-container>
+	<!--
+	Angular has three differet binding syntaxes
+	{{inputProperty}} is for binding @Input properties inside text nodes
+	[inputProperty] is for binding @Input properties in attributes
+	and @Output is for binding events also in attributes
+	-->
 	<h2>{{title}}</h2>
+	<!-- *ng... are structural directives, they may change the DOM tree -->
 	<ul *ngIf='entries'>
 		<li *ngFor='let entry of entries'>
-			{{entry.name}} - {{entry.year}}
+			<a [routerLink]='entry.name'>{{entry.name}} - {{entry.year}}</a>
 		</li>
 	</ul>
 </ng-container>
