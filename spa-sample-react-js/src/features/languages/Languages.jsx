@@ -9,7 +9,7 @@ import React, { useEffect } from 'react';
 // import { Button, Form, FormControl } from 'react-bootstrap';
 
 // page
-// import EquipmentSearchResults from './EquipmentSearchResults';
+import Timeline from './components/Timeline';
 // import './Equipment.css';
 
 
@@ -58,17 +58,17 @@ export default function Languages() {
 	];
 
 	useEffect(() => {
-		document.title = `Equipment - ${site} - South Pine`; // TODO get site name and store initial page title in a var somewhere...
+		// document.title = `Equipment - ${site} - South Pine`; // TODO get site name and store initial page title in a var somewhere...
 	});
 
 	return (
 
 		<div>
-			<timeline
+			<Timeline
 				title={timelineTitle}
 				entries={timelineEntries}
 				sortBy='name'
-				></timeline
+				></Timeline
 			>
 		</div>
 
