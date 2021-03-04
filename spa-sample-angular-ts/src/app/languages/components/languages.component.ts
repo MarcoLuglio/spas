@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+
+
 
 @Component({
 	selector: 'app-languages',
@@ -43,9 +46,13 @@ export class LanguagesComponent implements OnInit {
 		{ name: 'Swift', year: 2014 }
 	];
 
-	constructor() { }
+	constructor(private titleService: Title) { }
 
 	ngOnInit(): void {
+		// Angular has a dedicated service for changing the browser title
+		// allegidly to prevent issues if running angular as a native app
+		// for instance
+		this.titleService.setTitle('Languages');
 	}
 
 }

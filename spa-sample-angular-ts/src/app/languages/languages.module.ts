@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LanguagesRoutingModule } from './languages-routing.module';
-import { LanguagesComponent } from './languages.component';
+import { LanguagesComponent } from './components/languages.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
+
 
 
 @NgModule({
