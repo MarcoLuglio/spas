@@ -30,7 +30,7 @@ export class TimelineComponent implements OnInit {
 			case 'name':
 				sortedEntries = entries.sort(this.timelineSorterService.stringSorter);
 				break;
-			case 'date':
+			case 'year':
 				sortedEntries = entries.sort(this.timelineSorterService.numberSorter);
 				break;
 			default:
